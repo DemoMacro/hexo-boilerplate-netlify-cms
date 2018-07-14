@@ -1,5 +1,3 @@
-layout: false
----
 backend:
   name: git-gateway
   branch: master # Branch to update (master by default)
