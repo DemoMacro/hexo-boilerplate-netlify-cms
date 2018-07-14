@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://netlifybook.netlify.com/* https://netlifybook.imst.xyz/:splat 301!
