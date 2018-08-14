@@ -1,5 +1,4 @@
-
-####HexoCMS
+# HexoCMS
 
 HexoCMS is a static site cms for hexo and could deploy and control content on Netlify.com. You can visit the official HexoCMS site in [https://hexocms.imst.xyz/](https://hexocms.imst.xyz/)
 
