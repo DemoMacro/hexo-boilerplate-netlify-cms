@@ -1,13 +1,13 @@
 ---
 title: Hello World
 ---
-Welcome to [HexoCMS](https://hexocms.imst.xyz/)! This is your very first post. Check [Hexo](https://hexo.io/docs/) and [NetlifyCMS](https://www.netlifycms.org/docs/intro/) for more info. If you get any problems when using Hexocms, you can find the answer in [Hexo troubleshooting](https://hexo.io/docs/troubleshooting.html) , [NetlifyCMS issues](https://github.com/netlify/netlify-cms/issues) or you can ask me on [GitHub](https://github.com/DemoMacro/HexoCMS/issues).
+Welcome to [Hexo-NetlifyCMS](https://hexocms.imst.xyz/)! This is your very first post. Check [Hexo](https://hexo.io/docs/) and [NetlifyCMS](https://www.netlifycms.org/docs/intro/) for more info. If you get any problems when using Hexo-NetlifyCMS, you can find the answer in [Hexo troubleshooting](https://hexo.io/docs/troubleshooting.html) , [NetlifyCMS issues](https://github.com/netlify/netlify-cms/issues) or you can ask me on [GitHub](https://github.com/DemoMacro/Hexo-NetlifyCMS/issues).
 
 ### Quick Start
 
-Let's get started with HexoCMS in three steps.
+Let's get started with Hexo-NetlifyCMS in three steps.
 
-### 1.Fork [HexoCMS](https://github.com/DemoMacro/HexoCMS) on Github
+### 1.Fork [Hexo-NetlifyCMS](https://github.com/DemoMacro/Hexo-NetlifyCMS) on Github
 
 More info: [Configuration](https://hexo.io/docs/configuration.html)
 
@@ -38,6 +38,6 @@ You'll need to add this to the <head> of your CMS index page at /admin/index.htm
 </script>
 ```
 
-### You are finished with HexoCMS
+### You are finished with Hexo-NetlifyCMS
 
 Now you can control site content in https://yoursite.netlify.com/admin/
