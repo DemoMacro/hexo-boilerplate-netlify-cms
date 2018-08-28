@@ -1,12 +1,12 @@
-# HexoCMS
+# Hexo-NetlifyCMS
 
-HexoCMS is a static site cms for hexo and could deploy and control content on Netlify.com. You can visit the official HexoCMS site in [https://hexocms.imst.xyz/](https://hexocms.imst.xyz/)
+Hexo-NetlifyCMS is a static site cms for hexo and could deploy and control content on Netlify.com. You can visit the official Hexo-NetlifyCMS site in [https://hexocms.imst.xyz/](https://hexocms.imst.xyz/)
 
 ### Quick Start
 
-Let's get started with HexoCMS in three steps.
+Let's get started with Hexo-NetlifyCMS in three steps.
 
-### 1.Fork [HexoCMS](https://github.com/DemoMacro/HexoCMS) on Github
+### 1.Fork [Hexo-NetlifyCMS](https://github.com/DemoMacro/Hexo-NetlifyCMS) on Github
 
 More info: [Configuration](https://hexo.io/docs/configuration.html)
 
@@ -37,6 +37,6 @@ You'll need to add this to the <head> of your CMS index page at /admin/index.htm
 </script>
 ```
 
-### You are finished with HexoCMS
+### You are finished with Hexo-NetlifyCMS
 
 Now you can control site content in https://yoursite.netlify.com/admin/
