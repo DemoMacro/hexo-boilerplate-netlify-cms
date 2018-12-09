@@ -11,10 +11,7 @@ Let's get started with Hexo-NetlifyCMS in three steps.
 More info: [Configuration](https://hexo.io/docs/configuration.html)
 
 ### 2.Deploy which repository you forked on Netlify
-```
-Build command: hexo generate
-Publish directory: public
-```
+
 More info: [A Step-by-Step Guide: Hexo on Netlify](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify/)
 
 ### 3.Add the Netlify Identity Widget
