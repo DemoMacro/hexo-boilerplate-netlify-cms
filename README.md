@@ -3,6 +3,8 @@ title: README
 ---
 # Hexo-NetlifyCMS
 
+![](https://img.shields.io/github/license/DemoMacro/Hexo-NetlifyCMS.svg?style=flat)
+
 > This is a hexo site hosted with Netlify.
 
 <!-- Markdown snippet -->
