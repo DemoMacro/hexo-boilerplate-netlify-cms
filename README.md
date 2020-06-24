@@ -3,14 +3,14 @@ title: README
 ---
 # Hexo-NetlifyCMS
 
-![](https://img.shields.io/github/license/DemoMacro/Hexo-NetlifyCMS.svg?style=flat)
+![GitHub](https://img.shields.io/github/license/DemoMacro/Hexo-NetlifyCMS)
 
 > This is a hexo site hosted with Netlify.
 
 <!-- Markdown snippet -->
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/DemoMacro/Hexo-NetlifyCMS/)
 
-### Quick Start
+## Quick Start
 
 Let's get started with Hexo-NetlifyCMS step by step.
 
@@ -61,3 +61,8 @@ You'll need to add this to the `<head>` of your CMS index page at /admin/index.h
 ### You are finished with Hexo-NetlifyCMS
 
 Now you can control site content in https://yoursite.netlify.com/admin/
+
+## Donate
+
+* [Alipay](https://qr.alipay.com/fkx06887yqy4k3q5kemidbc)
+* [Paypal](https://paypal.me/DemoMacro)
