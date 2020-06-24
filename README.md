@@ -40,7 +40,8 @@ Netlify's Identity and Git Gateway services allow you to manage CMS admin users 
 You'll need to add this to the `<head>` of your CMS index page at /admin/index.html, as well as the `<head>` of your site's main index page.We could include the script in your site using Netlify's Script Injection feature;
 
 ```html
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- Include the script that enables Netlify Identity on this page. -->
+<script src="https://cdn.jsdelivr.net/npm/netlify-identity-widget@1/build/netlify-identity-widget.min.js" async defer></script>
 ```
  Add the following script before the closing body tag of your site's main index page using Netlify's Script Injection feature.
 
