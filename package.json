@@ -1,7 +1,17 @@
 {
-  "name": "hexo-site",
+  "name": "{{name}}",
   "version": "0.0.0",
   "private": true,
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    {
+      "type": "CC-BY-NC-SA-4.0",
+      "url": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"
+    }
+  ],
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
