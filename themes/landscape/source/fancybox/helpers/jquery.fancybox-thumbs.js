@@ -37,7 +37,7 @@
         }
 
         return href;
-      },
+      }
     },
 
     wrap: null,
@@ -111,7 +111,7 @@
               width: width,
               height: height,
               top: Math.floor(thumbHeight / 2 - height / 2),
-              left: Math.floor(thumbWidth / 2 - width / 2),
+              left: Math.floor(thumbWidth / 2 - width / 2)
             });
 
             parent.width(thumbWidth).height(thumbHeight);
@@ -131,8 +131,8 @@
           'left',
           Math.floor(
             $(window).width() * 0.5 -
-              (obj.index * this.width + this.width * 0.5),
-          ),
+              (obj.index * this.width + this.width * 0.5)
+          )
         );
     },
 
@@ -171,10 +171,10 @@
           {
             left: Math.floor(
               $(window).width() * 0.5 -
-                (obj.index * this.width + this.width * 0.5),
-            ),
+                (obj.index * this.width + this.width * 0.5)
+            )
           },
-          150,
+          150
         );
       }
     },
@@ -187,6 +187,6 @@
       this.wrap = null;
       this.list = null;
       this.width = 0;
-    },
+    }
   };
 })(jQuery);

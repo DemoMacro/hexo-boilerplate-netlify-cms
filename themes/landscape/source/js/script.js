@@ -70,7 +70,7 @@
             encodedUrl +
             '" class="article-share-google" target="_blank" title="Google+"></a>',
           '</div>',
-          '</div>',
+          '</div>'
         ].join('');
 
         var box = $(html);
@@ -83,7 +83,7 @@
       box
         .css({
           top: offset.top + 25,
-          left: offset.left,
+          left: offset.left
         })
         .addClass('on');
     })
@@ -100,7 +100,7 @@
       window.open(
         this.href,
         'article-share-box-window-' + Date.now(),
-        'width=500,height=450',
+        'width=500,height=450'
       );
     });
 
@@ -116,11 +116,7 @@
         if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
         $(this).wrap(
-          '<a href="' +
-            this.src +
-            '" title="' +
-            alt +
-            '" class="fancybox"></a>',
+          '<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>'
         );
       });
 

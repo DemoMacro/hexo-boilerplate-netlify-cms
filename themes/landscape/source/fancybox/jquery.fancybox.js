@@ -95,16 +95,16 @@
 
       ajax: {
         dataType: 'html',
-        headers: { 'X-fancyBox': true },
+        headers: { 'X-fancyBox': true }
       },
       iframe: {
         scrolling: 'auto',
-        preload: true,
+        preload: true
       },
       swf: {
         wmode: 'transparent',
         allowfullscreen: 'true',
-        allowscriptaccess: 'always',
+        allowscriptaccess: 'always'
       },
 
       keys: {
@@ -112,22 +112,22 @@
           13: 'left', // enter
           34: 'up', // page down
           39: 'left', // right arrow
-          40: 'up', // down arrow
+          40: 'up' // down arrow
         },
         prev: {
           8: 'right', // backspace
           33: 'down', // page up
           37: 'right', // left arrow
-          38: 'down', // up arrow
+          38: 'down' // up arrow
         },
         close: [27], // escape key
         play: [32], // space - start/stop slideshow
-        toggle: [70], // letter "f" - toggle fullscreen
+        toggle: [70] // letter "f" - toggle fullscreen
       },
 
       direction: {
         next: 'left',
-        prev: 'right',
+        prev: 'right'
       },
 
       scrollOutside: true,
@@ -155,7 +155,7 @@
         next:
           '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
         prev:
-          '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>',
+          '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
       },
 
       // Properties for each animation type
@@ -188,7 +188,7 @@
       // Enable default helpers
       helpers: {
         overlay: true,
-        title: true,
+        title: true
       },
 
       // Callbacks
@@ -199,7 +199,7 @@
       afterShow: $.noop, // After opening
       beforeChange: $.noop, // Before changing gallery item
       beforeClose: $.noop, // Before closing
-      afterClose: $.noop, // After closing
+      afterClose: $.noop // After closing
     },
 
     //Current state
@@ -219,7 +219,7 @@
 
     player: {
       timer: null,
-      isActive: false,
+      isActive: false
     },
 
     // Loaders
@@ -277,7 +277,7 @@
                 .text(element.data('fancybox-title') || element.attr('title'))
                 .html(),
               isDom: true,
-              element: element,
+              element: element
             };
 
             if ($.metadata) {
@@ -331,7 +331,7 @@
           if (type === 'inline') {
             if (href) {
               content = $(
-                isString(href) ? href.replace(/.*(?=#[^\s]+$)/, '') : href,
+                isString(href) ? href.replace(/.*(?=#[^\s]+$)/, '') : href
               ); //strip for ie7
             } else if (obj.isDom) {
               content = element;
@@ -349,7 +349,7 @@
           type: type,
           content: content,
           title: title,
-          selector: selector,
+          selector: selector
         });
 
         group[i] = obj;
@@ -470,7 +470,7 @@
             D.bind({
               'onCancel.player beforeClose.player': stop,
               'onUpdate.player': set,
-              'beforeLoad.player': clear,
+              'beforeLoad.player': clear
             });
 
             set();
@@ -603,7 +603,7 @@
 
           didUpdate = null;
         },
-        anyway && !isTouch ? 0 : 300,
+        anyway && !isTouch ? 0 : 300
       );
     },
 
@@ -654,7 +654,7 @@
         el.css({
           position: 'absolute',
           top: viewport.h * 0.5 + viewport.y,
-          left: viewport.w * 0.5 + viewport.x,
+          left: viewport.w * 0.5 + viewport.x
         });
       }
 
@@ -665,7 +665,7 @@
       var locked = (F.current && F.current.locked) || false,
         rez = {
           x: W.scrollLeft(),
-          y: W.scrollTop(),
+          y: W.scrollTop()
         };
 
       if (locked && locked.length) {
@@ -704,7 +704,7 @@
         'orientationchange.fb' +
           (isTouch ? '' : ' resize.fb') +
           (current.autoCenter && !current.locked ? ' scroll.fb' : ''),
-        F.update,
+        F.update
       );
 
       keys = current.keys;
@@ -802,7 +802,7 @@
             ) {
               F.helpers[helper][event](
                 $.extend(true, {}, F.helpers[helper].defaults, opts),
-                obj,
+                obj
               );
             }
           });
@@ -816,7 +816,7 @@
       return (
         isString(str) &&
         str.match(
-          /(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i,
+          /(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i
         )
       );
     },
@@ -865,9 +865,9 @@
           keys: null,
           helpers: {
             overlay: {
-              closeClick: false,
-            },
-          },
+              closeClick: false
+            }
+          }
         });
       }
 
@@ -942,14 +942,14 @@
             ' fancybox-type-' +
             type +
             ' fancybox-tmp ' +
-            coming.wrapCSS,
+            coming.wrapCSS
         )
         .appendTo(coming.parent || 'body');
 
       $.extend(coming, {
         skin: $('.fancybox-skin', coming.wrap),
         outer: $('.fancybox-outer', coming.wrap),
-        inner: $('.fancybox-inner', coming.wrap),
+        inner: $('.fancybox-inner', coming.wrap)
       });
 
       $.each(['Top', 'Right', 'Bottom', 'Left'], function (i, v) {
@@ -987,7 +987,7 @@
         minHeight: 0,
         scrolling: 'no',
         hasError: type,
-        content: F.coming.tpl.error,
+        content: F.coming.tpl.error
       });
 
       F._afterLoad();
@@ -1040,8 +1040,8 @@
 
               F._afterLoad();
             }
-          },
-        }),
+          }
+        })
       );
     },
 
@@ -1159,7 +1159,7 @@
         outer: current.outer,
         inner: current.inner,
         current: current,
-        previous: previous,
+        previous: previous
       });
 
       href = current.href;
@@ -1176,7 +1176,7 @@
                 placeholder,
                 $('<div class="' + placeholder + '"></div>')
                   .insertAfter(content)
-                  .hide(),
+                  .hide()
               );
             }
 
@@ -1233,7 +1233,7 @@
           ? 'scroll'
           : scrolling === 'no'
           ? 'hidden'
-          : scrolling,
+          : scrolling
       );
 
       // Set initial dimensions and start position
@@ -1367,21 +1367,17 @@
 
       // Calculations for the content
       minWidth = getScalar(
-        isPercentage(minWidth) ? getScalar(minWidth, 'w') - wSpace : minWidth,
+        isPercentage(minWidth) ? getScalar(minWidth, 'w') - wSpace : minWidth
       );
       maxWidth = getScalar(
-        isPercentage(maxWidth) ? getScalar(maxWidth, 'w') - wSpace : maxWidth,
+        isPercentage(maxWidth) ? getScalar(maxWidth, 'w') - wSpace : maxWidth
       );
 
       minHeight = getScalar(
-        isPercentage(minHeight)
-          ? getScalar(minHeight, 'h') - hSpace
-          : minHeight,
+        isPercentage(minHeight) ? getScalar(minHeight, 'h') - hSpace : minHeight
       );
       maxHeight = getScalar(
-        isPercentage(maxHeight)
-          ? getScalar(maxHeight, 'h') - hSpace
-          : maxHeight,
+        isPercentage(maxHeight) ? getScalar(maxHeight, 'h') - hSpace : maxHeight
       );
 
       // These will be used to determine if wrap can fit in the viewport
@@ -1471,11 +1467,11 @@
         } else {
           width = Math.max(
             minWidth,
-            Math.min(width, width - (width_ - maxWidth_)),
+            Math.min(width, width - (width_ - maxWidth_))
           );
           height = Math.max(
             minHeight,
-            Math.min(height, height - (height_ - maxHeight_)),
+            Math.min(height, height - (height_ - maxHeight_))
           );
         }
       }
@@ -1511,7 +1507,7 @@
       $.extend(current, {
         dim: {
           width: getValue(width_),
-          height: getValue(height_),
+          height: getValue(height_)
         },
         origWidth: origWidth,
         origHeight: origHeight,
@@ -1520,7 +1516,7 @@
         wPadding: wPadding,
         hPadding: hPadding,
         wrapSpace: height_ - skin.outerHeight(true),
-        skinSpace: skin.height() - height,
+        skinSpace: skin.height() - height
       });
 
       if (
@@ -1543,7 +1539,7 @@
         rez = {
           position: 'absolute',
           top: margin[0],
-          left: margin[3],
+          left: margin[3]
         };
 
       if (
@@ -1560,10 +1556,10 @@
       }
 
       rez.top = getValue(
-        Math.max(rez.top, rez.top + (viewport.h - height) * current.topRatio),
+        Math.max(rez.top, rez.top + (viewport.h - height) * current.topRatio)
       );
       rez.left = getValue(
-        Math.max(rez.left, rez.left + (viewport.w - width) * current.leftRatio),
+        Math.max(rez.left, rez.left + (viewport.w - width) * current.leftRatio)
       );
 
       return rez;
@@ -1648,11 +1644,11 @@
         wrap: null,
         skin: null,
         outer: null,
-        inner: null,
+        inner: null
       });
 
       F.trigger('afterClose', obj);
-    },
+    }
   });
 
   /*
@@ -1700,7 +1696,7 @@
         top: getValue(pos.top - hPadding * current.topRatio),
         left: getValue(pos.left - wPadding * current.leftRatio),
         width: getValue(width + wPadding),
-        height: getValue(height + hPadding),
+        height: getValue(height + hPadding)
       };
 
       return pos;
@@ -1727,14 +1723,14 @@
         value = now - padding;
 
         F.skin[prop](
-          getScalar(prop === 'width' ? value : value - wrapSpace * ratio),
+          getScalar(prop === 'width' ? value : value - wrapSpace * ratio)
         );
         F.inner[prop](
           getScalar(
             prop === 'width'
               ? value
-              : value - wrapSpace * ratio - skinSpace * ratio,
-          ),
+              : value - wrapSpace * ratio - skinSpace * ratio
+          )
         );
       }
     },
@@ -1763,7 +1759,7 @@
         duration: effect === 'none' ? 0 : current.openSpeed,
         easing: current.openEasing,
         step: elastic ? this.step : null,
-        complete: F._afterZoomIn,
+        complete: F._afterZoomIn
       });
     },
 
@@ -1785,7 +1781,7 @@
         duration: effect === 'none' ? 0 : current.closeSpeed,
         easing: current.closeEasing,
         step: elastic ? this.step : null,
-        complete: F._afterZoomOut,
+        complete: F._afterZoomOut
       });
     },
 
@@ -1819,7 +1815,7 @@
         F.wrap.css(startPos).animate(endPos, {
           duration: current.nextSpeed,
           easing: current.nextEasing,
-          complete: F._afterZoomIn,
+          complete: F._afterZoomIn
         });
       }
     },
@@ -1844,9 +1840,9 @@
         easing: previous.prevEasing,
         complete: function () {
           $(this).trigger('onReset').remove();
-        },
+        }
       });
-    },
+    }
   };
 
   /*
@@ -1860,7 +1856,7 @@
       showEarly: true, // indicates if should be opened immediately or wait until the content is ready
       css: {}, // custom CSS properties
       locked: !isTouch, // if true, the content will be locked into overlay
-      fixed: true, // if false, the overlay CSS position property will not be set to "fixed"
+      fixed: true // if false, the overlay CSS position property will not be set to "fixed"
     },
 
     overlay: null, // current handle
@@ -1880,7 +1876,7 @@
       parent = F.coming ? F.coming.parent : opts.parent;
 
       this.overlay = $('<div class="fancybox-overlay"></div>').appendTo(
-        parent && parent.lenth ? parent : 'body',
+        parent && parent.lenth ? parent : 'body'
       );
       this.fixed = false;
 
@@ -1940,7 +1936,7 @@
 
       $.extend(this, {
         overlay: null,
-        fixed: false,
+        fixed: false
       });
     },
 
@@ -1957,7 +1953,7 @@
       if (IE) {
         offsetWidth = Math.max(
           document.documentElement.offsetWidth,
-          document.body.offsetWidth,
+          document.body.offsetWidth
         );
 
         if (D.width() > offsetWidth) {
@@ -2029,7 +2025,7 @@
       if (this.overlay && !F.coming) {
         this.overlay.fadeOut(opts.speedOut, $.proxy(this.close, this));
       }
-    },
+    }
   };
 
   /*
@@ -2039,7 +2035,7 @@
   F.helpers.title = {
     defaults: {
       type: 'float', // 'float', 'inside', 'outside' or 'over',
-      position: 'bottom', // 'top' or 'bottom'
+      position: 'bottom' // 'top' or 'bottom'
     },
 
     beforeShow: function (opts) {
@@ -2062,7 +2058,7 @@
           type +
           '-wrap">' +
           text +
-          '</div>',
+          '</div>'
       );
 
       switch (type) {
@@ -2092,13 +2088,13 @@
 
           //Increase bottom margin so this title will also fit into viewport
           F.current.margin[2] += Math.abs(
-            getScalar(title.css('margin-bottom')),
+            getScalar(title.css('margin-bottom'))
           );
           break;
       }
 
       title[opts.position === 'top' ? 'prependTo' : 'appendTo'](target);
-    },
+    }
   };
 
   // jQuery plugin initialization
@@ -2148,7 +2144,7 @@
       D.undelegate(selector, 'click.fb-start').delegate(
         selector + ":not('.fancybox-item, .fancybox-nav')",
         'click.fb-start',
-        run,
+        run
       );
     }
 
@@ -2165,7 +2161,7 @@
       // http://benalman.com/projects/jquery-misc-plugins/#scrollbarwidth
       $.scrollbarWidth = function () {
         var parent = $(
-            '<div style="width:50px;height:50px;overflow:auto"><div/></div>',
+            '<div style="width:50px;height:50px;overflow:auto"><div/></div>'
           ).appendTo('body'),
           child = parent.children(),
           width = child.innerWidth() - child.height(99).innerWidth();
@@ -2179,7 +2175,7 @@
     if ($.support.fixedPosition === undefined) {
       $.support.fixedPosition = (function () {
         var elem = $('<div style="position:fixed;top:20px;"></div>').appendTo(
-            'body',
+            'body'
           ),
           fixed = elem[0].offsetTop === 20 || elem[0].offsetTop === 15;
 
@@ -2192,7 +2188,7 @@
     $.extend(F.defaults, {
       scrollbarWidth: $.scrollbarWidth(),
       fixed: $.support.fixedPosition,
-      parent: $('body'),
+      parent: $('body')
     });
 
     //Get real width of page scroll-bar
@@ -2207,7 +2203,7 @@
     $(
       "<style type='text/css'>.fancybox-margin{margin-right:" +
         (w2 - w1) +
-        'px;}</style>',
+        'px;}</style>'
     ).appendTo('head');
   });
 })(window, document, jQuery);

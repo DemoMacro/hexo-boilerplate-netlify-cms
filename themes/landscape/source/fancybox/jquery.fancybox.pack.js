@@ -64,14 +64,14 @@
       swf: {
         wmode: 'transparent',
         allowfullscreen: 'true',
-        allowscriptaccess: 'always',
+        allowscriptaccess: 'always'
       },
       keys: {
         next: { 13: 'left', 34: 'up', 39: 'left', 40: 'up' },
         prev: { 8: 'right', 33: 'down', 37: 'right', 38: 'down' },
         close: [27],
         play: [32],
-        toggle: [70],
+        toggle: [70]
       },
       direction: { next: 'left', prev: 'right' },
       scrollOutside: !0,
@@ -95,7 +95,7 @@
         next:
           '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
         prev:
-          '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>',
+          '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
       },
       openEffect: 'fade',
       openSpeed: 250,
@@ -123,7 +123,7 @@
       afterShow: f.noop,
       beforeChange: f.noop,
       beforeClose: f.noop,
-      afterClose: f.noop,
+      afterClose: f.noop
     },
     group: {},
     opts: {},
@@ -162,7 +162,7 @@
                       .text(c.data('fancybox-title') || c.attr('title'))
                       .html(),
                     isDom: !0,
-                    element: c,
+                    element: c
                   }),
                   f.metadata && f.extend(!0, l, c.metadata()))
                 : (l = c));
@@ -200,7 +200,7 @@
               type: n,
               content: k,
               title: h,
-              selector: m,
+              selector: m
             });
             a[e] = l;
           }),
@@ -260,7 +260,7 @@
           p.bind({
             'onCancel.player beforeClose.player': c,
             'onUpdate.player': e,
-            'beforeLoad.player': d,
+            'beforeLoad.player': d
           }),
           e(),
           b.trigger('onPlayStart'))
@@ -313,7 +313,7 @@
               b.trigger('onUpdate'),
               (C = null));
           },
-          e && !t ? 0 : 300,
+          e && !t ? 0 : 300
         ));
     },
     toggle: function (a) {
@@ -343,7 +343,7 @@
         a.css({
           position: 'absolute',
           top: 0.5 * d.h + d.y,
-          left: 0.5 * d.w + d.x,
+          left: 0.5 * d.w + d.x
         }));
       b.trigger('onLoading');
     },
@@ -369,7 +369,7 @@
           'orientationchange.fb' +
             (t ? '' : ' resize.fb') +
             (a.autoCenter && !a.locked ? ' scroll.fb' : ''),
-          b.update,
+          b.update
         ),
         (d = a.keys) &&
           p.bind('keydown.fb', function (e) {
@@ -432,7 +432,7 @@
       return (
         r(a) &&
         a.match(
-          /(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i,
+          /(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i
         )
       );
     },
@@ -459,7 +459,7 @@
           arrows: !1,
           mouseWheel: !1,
           keys: null,
-          helpers: { overlay: { closeClick: !1 } },
+          helpers: { overlay: { closeClick: !1 } }
         });
       d.autoSize && (d.autoWidth = d.autoHeight = !0);
       'auto' === d.width && (d.autoWidth = !0);
@@ -490,13 +490,13 @@
               ' fancybox-type-' +
               c +
               ' fancybox-tmp ' +
-              d.wrapCSS,
+              d.wrapCSS
           )
           .appendTo(d.parent || 'body');
         f.extend(d, {
           skin: f('.fancybox-skin', d.wrap),
           outer: f('.fancybox-outer', d.wrap),
-          inner: f('.fancybox-inner', d.wrap),
+          inner: f('.fancybox-inner', d.wrap)
         });
         f.each(['Top', 'Right', 'Bottom', 'Left'], function (a, b) {
           d.skin.css('padding' + b, x(d.padding[a]));
@@ -523,7 +523,7 @@
         minHeight: 0,
         scrolling: 'no',
         hasError: a,
-        content: b.coming.tpl.error,
+        content: b.coming.tpl.error
       });
       b._afterLoad();
     },
@@ -553,8 +553,8 @@
           },
           success: function (d, e) {
             'success' === e && ((a.content = d), b._afterLoad());
-          },
-        }),
+          }
+        })
       );
     },
     _loadIframe: function () {
@@ -628,7 +628,7 @@
             outer: a.outer,
             inner: a.inner,
             current: a,
-            previous: d,
+            previous: d
           });
           g = a.href;
           switch (c) {
@@ -643,7 +643,7 @@
                       'fancybox-placeholder',
                       f('<div class="fancybox-placeholder"></div>')
                         .insertAfter(e)
-                        .hide(),
+                        .hide()
                     ),
                   (e = e.show().detach()),
                   a.wrap.bind('onReset', function () {
@@ -678,7 +678,7 @@
           b.trigger('beforeShow');
           a.inner.css(
             'overflow',
-            'yes' === l ? 'scroll' : 'no' === l ? 'hidden' : l,
+            'yes' === l ? 'scroll' : 'no' === l ? 'hidden' : l
           );
           b._setDimension();
           b.reposition();
@@ -806,7 +806,7 @@
         wPadding: y,
         hPadding: w,
         wrapSpace: z - l.outerHeight(!0),
-        skinSpace: l.height() - k,
+        skinSpace: l.height() - k
       });
       !I && h.autoHeight && k > v && k < q && !c && g.height('auto');
     },
@@ -871,10 +871,10 @@
         wrap: null,
         skin: null,
         outer: null,
-        inner: null,
+        inner: null
       });
       b.trigger('afterClose', a);
-    },
+    }
   });
   b.transitions = {
     getOrigPosition: function () {
@@ -902,7 +902,7 @@
         top: x(c.top - h * a.topRatio),
         left: x(c.left - k * a.leftRatio),
         width: x(f + k),
-        height: x(g + h),
+        height: x(g + h)
       });
     },
     step: function (a, d) {
@@ -930,14 +930,12 @@
       c
         ? ((d = this.getOrigPosition()), a.openOpacity && (d.opacity = 0.1))
         : 'fade' === e && (d.opacity = 0.1);
-      b.wrap
-        .css(d)
-        .animate(l, {
-          duration: 'none' === e ? 0 : a.openSpeed,
-          easing: a.openEasing,
-          step: c ? this.step : null,
-          complete: b._afterZoomIn,
-        });
+      b.wrap.css(d).animate(l, {
+        duration: 'none' === e ? 0 : a.openSpeed,
+        easing: a.openEasing,
+        step: c ? this.step : null,
+        complete: b._afterZoomIn
+      });
     },
     zoomOut: function () {
       var a = b.current,
@@ -949,7 +947,7 @@
         duration: 'none' === d ? 0 : a.closeSpeed,
         easing: a.closeEasing,
         step: e ? this.step : null,
-        complete: b._afterZoomOut,
+        complete: b._afterZoomOut
       });
     },
     changeIn: function () {
@@ -967,13 +965,11 @@
           : ((e[g] = x(m(e[g]) + 200)), (c[g] = '-=200px')));
       'none' === d
         ? b._afterZoomIn()
-        : b.wrap
-            .css(e)
-            .animate(c, {
-              duration: a.nextSpeed,
-              easing: a.nextEasing,
-              complete: b._afterZoomIn,
-            });
+        : b.wrap.css(e).animate(c, {
+            duration: a.nextSpeed,
+            easing: a.nextEasing,
+            complete: b._afterZoomIn
+          });
     },
     changeOut: function () {
       var a = b.previous,
@@ -988,9 +984,9 @@
         easing: a.prevEasing,
         complete: function () {
           f(this).trigger('onReset').remove();
-        },
+        }
       });
-    },
+    }
   };
   b.helpers.overlay = {
     defaults: {
@@ -999,7 +995,7 @@
       showEarly: !0,
       css: {},
       locked: !t,
-      fixed: !0,
+      fixed: !0
     },
     overlay: null,
     fixed: !1,
@@ -1010,7 +1006,7 @@
       this.overlay && this.close();
       d = b.coming ? b.coming.parent : a.parent;
       this.overlay = f('<div class="fancybox-overlay"></div>').appendTo(
-        d && d.lenth ? d : 'body',
+        d && d.lenth ? d : 'body'
       );
       this.fixed = !1;
       a.fixed &&
@@ -1088,7 +1084,7 @@
       this.overlay &&
         !b.coming &&
         this.overlay.fadeOut(a.speedOut, f.proxy(this.close, this));
-    },
+    }
   };
   b.helpers.title = {
     defaults: { type: 'float', position: 'bottom' },
@@ -1103,7 +1099,7 @@
             c +
             '-wrap">' +
             e +
-            '</div>',
+            '</div>'
         );
         switch (c) {
           case 'inside':
@@ -1124,7 +1120,7 @@
         }
         d['top' === a.position ? 'prependTo' : 'appendTo'](c);
       }
-    },
+    }
   };
   f.fn.fancybox = function (a) {
     var d,
@@ -1160,7 +1156,7 @@
           .delegate(
             c + ":not('.fancybox-item, .fancybox-nav')",
             'click.fb-start',
-            l,
+            l
           )
       : e.unbind('click.fb-start').bind('click.fb-start', l);
     this.filter('[data-fancybox-start=1]').trigger('click');
@@ -1171,7 +1167,7 @@
     f.scrollbarWidth === w &&
       (f.scrollbarWidth = function () {
         var a = f(
-            '<div style="width:50px;height:50px;overflow:auto"><div/></div>',
+            '<div style="width:50px;height:50px;overflow:auto"><div/></div>'
           ).appendTo('body'),
           b = a.children(),
           b = b.innerWidth() - b.height(99).innerWidth();
@@ -1181,7 +1177,7 @@
     f.support.fixedPosition === w &&
       (f.support.fixedPosition = (function () {
         var a = f('<div style="position:fixed;top:20px;"></div>').appendTo(
-            'body',
+            'body'
           ),
           b = 20 === a[0].offsetTop || 15 === a[0].offsetTop;
         a.remove();
@@ -1190,7 +1186,7 @@
     f.extend(b.defaults, {
       scrollbarWidth: f.scrollbarWidth(),
       fixed: f.support.fixedPosition,
-      parent: f('body'),
+      parent: f('body')
     });
     a = f(s).width();
     K.addClass('fancybox-lock-test');
@@ -1199,7 +1195,7 @@
     f(
       "<style type='text/css'>.fancybox-margin{margin-right:" +
         (d - a) +
-        'px;}</style>',
+        'px;}</style>'
     ).appendTo('head');
   });
 })(window, document, jQuery);
