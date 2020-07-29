@@ -1,6 +1,7 @@
 ---
 title: README
 ---
+
 # Hexo-NetlifyCMS
 
 ![GitHub](https://img.shields.io/github/license/DemoMacro/Hexo-NetlifyCMS)
@@ -8,6 +9,7 @@ title: README
 > This is a hexo site hosted with Netlify.
 
 <!-- Markdown snippet -->
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/DemoMacro/Hexo-NetlifyCMS/)
 
 ## Quick Start
@@ -24,6 +26,7 @@ More info: [Configuration](https://hexo.io/docs/configuration.html)
 Build command: hexo generate
 Publish directory: public
 ```
+
 More info: [A Step-by-Step Guide: Hexo on Netlify](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify/)
 
 ### Enable Identity and Git Gateway
@@ -41,17 +44,22 @@ You'll need to add this to the `<head>` of your CMS index page at /admin/index.h
 
 ```html
 <!-- Include the script that enables Netlify Identity on this page. -->
-<script src="https://cdn.jsdelivr.net/npm/netlify-identity-widget@1/build/netlify-identity-widget.min.js" async defer></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/netlify-identity-widget@1/build/netlify-identity-widget.min.js"
+  async
+  defer
+></script>
 ```
- Add the following script before the closing body tag of your site's main index page using Netlify's Script Injection feature.
+
+Add the following script before the closing body tag of your site's main index page using Netlify's Script Injection feature.
 
 ```html
 <script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
+    window.netlifyIdentity.on('init', (user) => {
       if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
         });
       }
     });
@@ -65,5 +73,5 @@ Now you can control site content in https://yoursite.netlify.com/admin/
 
 ## Donate
 
-* [Alipay](https://qr.alipay.com/fkx06887yqy4k3q5kemidbc)
-* [Paypal](https://paypal.me/DemoMacro)
+- [Alipay](https://qr.alipay.com/fkx06887yqy4k3q5kemidbc)
+- [Paypal](https://paypal.me/DemoMacro)
