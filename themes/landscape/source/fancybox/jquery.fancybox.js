@@ -95,7 +95,7 @@
 
       ajax: {
         dataType: 'html',
-        headers: { 'X-fancyBox': true }
+        headers: {'X-fancyBox': true}
       },
       iframe: {
         scrolling: 'auto',
@@ -1740,7 +1740,7 @@
         startPos = current.pos,
         effect = current.openEffect,
         elastic = effect === 'elastic',
-        endPos = $.extend({ opacity: 1 }, startPos);
+        endPos = $.extend({opacity: 1}, startPos);
 
       // Remove "position" property that breaks older IE
       delete endPos.position;
@@ -1767,7 +1767,7 @@
       var current = F.current,
         effect = current.closeEffect,
         elastic = effect === 'elastic',
-        endPos = { opacity: 0.1 };
+        endPos = {opacity: 0.1};
 
       if (elastic) {
         endPos = this.getOrigPosition();
@@ -1789,7 +1789,7 @@
       var current = F.current,
         effect = current.nextEffect,
         startPos = current.pos,
-        endPos = { opacity: 1 },
+        endPos = {opacity: 1},
         direction = F.direction,
         distance = 200,
         field;
@@ -1823,7 +1823,7 @@
     changeOut: function () {
       var previous = F.previous,
         effect = previous.prevEffect,
-        endPos = { opacity: 0.1 },
+        endPos = {opacity: 0.1},
         direction = F.direction,
         distance = 200;
 

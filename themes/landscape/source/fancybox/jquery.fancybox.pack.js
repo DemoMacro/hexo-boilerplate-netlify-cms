@@ -59,21 +59,21 @@
       preload: 3,
       modal: !1,
       loop: !0,
-      ajax: { dataType: 'html', headers: { 'X-fancyBox': !0 } },
-      iframe: { scrolling: 'auto', preload: !0 },
+      ajax: {dataType: 'html', headers: {'X-fancyBox': !0}},
+      iframe: {scrolling: 'auto', preload: !0},
       swf: {
         wmode: 'transparent',
         allowfullscreen: 'true',
         allowscriptaccess: 'always'
       },
       keys: {
-        next: { 13: 'left', 34: 'up', 39: 'left', 40: 'up' },
-        prev: { 8: 'right', 33: 'down', 37: 'right', 38: 'down' },
+        next: {13: 'left', 34: 'up', 39: 'left', 40: 'up'},
+        prev: {8: 'right', 33: 'down', 37: 'right', 38: 'down'},
         close: [27],
         play: [32],
         toggle: [70]
       },
-      direction: { next: 'left', prev: 'right' },
+      direction: {next: 'left', prev: 'right'},
       scrollOutside: !0,
       index: 0,
       type: null,
@@ -115,7 +115,7 @@
       prevSpeed: 250,
       prevEasing: 'swing',
       prevMethod: 'changeOut',
-      helpers: { overlay: !0, title: !0 },
+      helpers: {overlay: !0, title: !0},
       onCancel: f.noop,
       beforeLoad: f.noop,
       afterLoad: f.noop,
@@ -137,7 +137,7 @@
     skin: null,
     outer: null,
     inner: null,
-    player: { timer: null, isActive: !1 },
+    player: {timer: null, isActive: !1},
     ajaxLoad: null,
     imgPreload: null,
     transitions: {},
@@ -349,7 +349,7 @@
     },
     getViewport: function () {
       var a = (b.current && b.current.locked) || !1,
-        d = { x: q.scrollLeft(), y: q.scrollTop() };
+        d = {x: q.scrollLeft(), y: q.scrollTop()};
       a && a.length
         ? ((d.w = a[0].clientWidth), (d.h = a[0].clientHeight))
         : ((d.w = t && s.innerWidth ? s.innerWidth : q.width()),
@@ -459,7 +459,7 @@
           arrows: !1,
           mouseWheel: !1,
           keys: null,
-          helpers: { overlay: { closeClick: !1 } }
+          helpers: {overlay: {closeClick: !1}}
         });
       d.autoSize && (d.autoWidth = d.autoHeight = !0);
       'auto' === d.width && (d.autoWidth = !0);
@@ -798,7 +798,7 @@
         ? c < G && k < C && c < D && k < B
         : (c < G || k < C) && (c < D || k < B);
       f.extend(h, {
-        dim: { width: x(a), height: x(z) },
+        dim: {width: x(a), height: x(z)},
         origWidth: D,
         origHeight: B,
         canShrink: e,
@@ -816,7 +816,7 @@
         c = d.margin,
         f = b.wrap.width() + c[1] + c[3],
         g = b.wrap.height() + c[0] + c[2],
-        c = { position: 'absolute', top: c[0], left: c[3] };
+        c = {position: 'absolute', top: c[0], left: c[3]};
       d.autoCenter && d.fixed && !a && g <= e.h && f <= e.w
         ? (c.position = 'fixed')
         : d.locked || ((c.top += e.y), (c.left += e.x));
@@ -925,7 +925,7 @@
         d = a.pos,
         e = a.openEffect,
         c = 'elastic' === e,
-        l = f.extend({ opacity: 1 }, d);
+        l = f.extend({opacity: 1}, d);
       delete l.position;
       c
         ? ((d = this.getOrigPosition()), a.openOpacity && (d.opacity = 0.1))
@@ -941,7 +941,7 @@
       var a = b.current,
         d = a.closeEffect,
         e = 'elastic' === d,
-        c = { opacity: 0.1 };
+        c = {opacity: 0.1};
       e && ((c = this.getOrigPosition()), a.closeOpacity && (c.opacity = 0.1));
       b.wrap.animate(c, {
         duration: 'none' === d ? 0 : a.closeSpeed,
@@ -954,7 +954,7 @@
       var a = b.current,
         d = a.nextEffect,
         e = a.pos,
-        c = { opacity: 1 },
+        c = {opacity: 1},
         f = b.direction,
         g;
       e.opacity = 0.1;
@@ -974,7 +974,7 @@
     changeOut: function () {
       var a = b.previous,
         d = a.prevEffect,
-        e = { opacity: 0.1 },
+        e = {opacity: 0.1},
         c = b.direction;
       'elastic' === d &&
         (e['down' === c || 'up' === c ? 'top' : 'left'] =
@@ -1035,7 +1035,7 @@
         this.el.removeClass('fancybox-lock'),
         q.scrollTop(this.scrollV).scrollLeft(this.scrollH));
       f('.fancybox-overlay').remove().hide();
-      f.extend(this, { overlay: null, fixed: !1 });
+      f.extend(this, {overlay: null, fixed: !1});
     },
     update: function () {
       var a = '100%',
@@ -1087,7 +1087,7 @@
     }
   };
   b.helpers.title = {
-    defaults: { type: 'float', position: 'bottom' },
+    defaults: {type: 'float', position: 'bottom'},
     beforeShow: function (a) {
       var d = b.current,
         e = d.title,
