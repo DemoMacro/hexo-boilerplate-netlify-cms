@@ -12,9 +12,7 @@ title: README
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/DemoMacro/hexo-boilerplate-netlify-cms&stack=cms)
 
-## Quick Start
-
-Let's get started with Hexo-NetlifyCMS step by step.
+## Manual start
 
 ### [Fork](https://github.com/DemoMacro/hexo-boilerplate-netlify-cms/fork) on Github
 
