@@ -23,21 +23,21 @@
     defaults: {
       width: 50, // thumbnail width
       height: 50, // thumbnail height
-      position: 'bottom', // 'top' or 'bottom'
+      position: "bottom", // 'top' or 'bottom'
       source: function (item) {
         // function to obtain the URL of the thumbnail image
         var href;
 
         if (item.element) {
-          href = $(item.element).find('img').attr('src');
+          href = $(item.element).find("img").attr("src");
         }
 
-        if (!href && item.type === 'image' && item.href) {
+        if (!href && item.type === "image" && item.href) {
           href = item.href;
         }
 
         return href;
-      }
+      },
     },
 
     wrap: null,
@@ -52,13 +52,13 @@
         thumbSource = opts.source;
 
       //Build list structure
-      list = '';
+      list = "";
 
       for (var n = 0; n < obj.group.length; n++) {
         list +=
           '<li><a style="width:' +
           thumbWidth +
-          'px;height:' +
+          "px;height:" +
           thumbHeight +
           'px;" href="javascript:jQuery.fancybox.jumpto(' +
           n +
@@ -67,8 +67,8 @@
 
       this.wrap = $('<div id="fancybox-thumbs"></div>')
         .addClass(opts.position)
-        .appendTo('body');
-      this.list = $('<ul>' + list + '</ul>').appendTo(this.wrap);
+        .appendTo("body");
+      this.list = $("<ul>" + list + "</ul>").appendTo(this.wrap);
 
       //Load each thumbnail
       $.each(obj.group, function (i) {
@@ -79,7 +79,7 @@
           return;
         }
 
-        $('<img />')
+        $("<img />")
           .load(function () {
             var width = this.width,
               height = this.height,
@@ -95,7 +95,7 @@
             widthRatio = width / thumbWidth;
             heightRatio = height / thumbHeight;
 
-            parent = that.list.children().eq(i).find('a');
+            parent = that.list.children().eq(i).find("a");
 
             if (widthRatio >= 1 && heightRatio >= 1) {
               if (widthRatio > heightRatio) {
@@ -111,15 +111,15 @@
               width: width,
               height: height,
               top: Math.floor(thumbHeight / 2 - height / 2),
-              left: Math.floor(thumbWidth / 2 - width / 2)
+              left: Math.floor(thumbWidth / 2 - width / 2),
             });
 
             parent.width(thumbWidth).height(thumbHeight);
 
             $(this).hide().appendTo(parent).fadeIn(300);
           })
-          .attr('src', href)
-          .attr('title', el.title);
+          .attr("src", href)
+          .attr("title", el.title);
       });
 
       //Set initial width
@@ -128,7 +128,7 @@
       this.list
         .width(this.width * (obj.group.length + 1))
         .css(
-          'left',
+          "left",
           Math.floor(
             $(window).width() * 0.5 -
               (obj.index * this.width + this.width * 0.5)
@@ -145,7 +145,7 @@
       }
 
       //Increase bottom margin to give space for thumbs
-      obj.margin[opts.position === 'top' ? 0 : 2] += opts.height + 15;
+      obj.margin[opts.position === "top" ? 0 : 2] += opts.height + 15;
     },
 
     afterShow: function (opts, obj) {
@@ -159,9 +159,9 @@
       //Set active element
       this.list
         .children()
-        .removeClass('active')
+        .removeClass("active")
         .eq(obj.index)
-        .addClass('active');
+        .addClass("active");
     },
 
     //Center list
@@ -172,7 +172,7 @@
             left: Math.floor(
               $(window).width() * 0.5 -
                 (obj.index * this.width + this.width * 0.5)
-            )
+            ),
           },
           150
         );
@@ -187,6 +187,6 @@
       this.wrap = null;
       this.list = null;
       this.width = 0;
-    }
+    },
   };
 })(jQuery);

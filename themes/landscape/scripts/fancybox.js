@@ -1,4 +1,5 @@
-var rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\/\\w]*))?)/;
+var rUrl =
+  /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\/\\w]*))?)/;
 
 /**
  * Fancybox tag
@@ -7,15 +8,15 @@ var rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:ww
  *   {% fancybox /path/to/image [/path/to/thumbnail] [title] %}
  */
 
-hexo.extend.tag.register('fancybox', function (args) {
+hexo.extend.tag.register("fancybox", function (args) {
   var original = args.shift(),
-    thumbnail = '';
+    thumbnail = "";
 
   if (args.length && rUrl.test(args[0])) {
     thumbnail = args.shift();
   }
 
-  var title = args.join(' ');
+  var title = args.join(" ");
 
   return (
     '<a class="fancybox" href="' +
@@ -29,5 +30,5 @@ hexo.extend.tag.register('fancybox', function (args) {
     title +
     '">'
   );
-  '</a>' + (title ? '<span class="caption">' + title + '</span>' : '');
+  "</a>" + (title ? '<span class="caption">' + title + "</span>" : "");
 });

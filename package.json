@@ -1,17 +1,20 @@
 {
-  "name": "hexo-netlifycms",
+  "name": "hexo-boilerplate-netlify-cms",
   "version": "0.0.0",
+  "description": "Hexo boilerplate integrated with Netlify CMS, powered by Demo Macro.",
   "private": true,
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://spdx.org/licenses/MIT.html"
-    },
-    {
-      "type": "CC-BY-NC-SA-4.0",
-      "url": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"
-    }
-  ],
+  "devDependencies": {
+    "hexo": "^5.4.2",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^4.1.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-landscape": "^0.0.3"
+  },
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
@@ -19,22 +22,26 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.2"
   },
-  "dependencies": {
-    "hexo": "^4.2.1",
-    "hexo-generator-archive": "^1.0.0",
-    "hexo-generator-category": "^1.0.0",
-    "hexo-generator-index": "^1.0.0",
-    "hexo-generator-tag": "^1.0.0",
-    "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^2.0.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemoMacro/hexo-boilerplate-netlify-cms.git"
   },
-  "prettier": {
-    "singleQuote": true,
-    "bracketSpacing": false,
-    "trailingComma": "none"
-  }
+  "keywords": [
+    "hexo",
+    "boilerplate",
+    "netlify",
+    "netlify-cms"
+  ],
+  "author": {
+    "name": "Demo Macro",
+    "email": "abc@imst.xyz",
+    "url": "https://imst.xyz/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DemoMacro/hexo-boilerplate-netlify-cms/issues"
+  },
+  "homepage": "https://github.com/DemoMacro/hexo-boilerplate-netlify-cms#readme"
 }
