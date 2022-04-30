@@ -4,6 +4,7 @@ title: README
 
 # hexo-boilerplate-netlify-cms
 
+![Netlify](https://img.shields.io/netlify/2a5ff8ae-a2d0-47f7-a90b-67f5c1b4fb5b)
 ![GitHub](https://img.shields.io/github/license/DemoMacro/hexo-boilerplate-netlify-cms)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
