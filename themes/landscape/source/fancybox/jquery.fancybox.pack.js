@@ -927,14 +927,12 @@
       c
         ? ((d = this.getOrigPosition()), a.openOpacity && (d.opacity = 0.1))
         : "fade" === e && (d.opacity = 0.1);
-      b.wrap
-        .css(d)
-        .animate(l, {
-          duration: "none" === e ? 0 : a.openSpeed,
-          easing: a.openEasing,
-          step: c ? this.step : null,
-          complete: b._afterZoomIn,
-        });
+      b.wrap.css(d).animate(l, {
+        duration: "none" === e ? 0 : a.openSpeed,
+        easing: a.openEasing,
+        step: c ? this.step : null,
+        complete: b._afterZoomIn,
+      });
     },
     zoomOut: function () {
       var a = b.current,
@@ -964,13 +962,11 @@
           : ((e[g] = x(m(e[g]) + 200)), (c[g] = "-=200px")));
       "none" === d
         ? b._afterZoomIn()
-        : b.wrap
-            .css(e)
-            .animate(c, {
-              duration: a.nextSpeed,
-              easing: a.nextEasing,
-              complete: b._afterZoomIn,
-            });
+        : b.wrap.css(e).animate(c, {
+            duration: a.nextSpeed,
+            easing: a.nextEasing,
+            complete: b._afterZoomIn,
+          });
     },
     changeOut: function () {
       var a = b.previous,
