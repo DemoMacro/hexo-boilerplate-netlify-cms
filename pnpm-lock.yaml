@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  hexo: 5.4.2
+  hexo: 6.2.0
   hexo-generator-archive: 1.0.0
   hexo-generator-category: 1.0.0
   hexo-generator-index: 2.0.0
@@ -13,7 +13,7 @@ specifiers:
   hexo-theme-landscape: 0.0.3
 
 devDependencies:
-  hexo: 5.4.2
+  hexo: 6.2.0
   hexo-generator-archive: 1.0.0
   hexo-generator-category: 1.0.0
   hexo-generator-index: 2.0.0
@@ -116,10 +116,8 @@ packages:
     resolution: {integrity: sha512-Xg+9RwCg/0p32teKdGMPTPnVXKD0w3DfHnFTficozsAgsvq2XenPJq/MYpzzQ/v8zrOyJn6Ds39VA4JIDwFfqw==}
     dev: true
 
-  /argparse/1.0.10:
-    resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
-    dependencies:
-      sprintf-js: 1.0.3
+  /argparse/2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: true
 
   /asap/2.0.6:
@@ -492,6 +490,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /fast-equals/3.0.3:
+    resolution: {integrity: sha512-NCe8qxnZFARSHGztGMZOO/PC1qa5MIFB5Hp66WdzbCRAz8U8US3bx1UTgLS49efBQPcUtO9gf5oVEY8o7y/7Kg==}
+    dev: true
+
   /fast-levenshtein/2.0.6:
     resolution: {integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=}
     dev: true
@@ -599,17 +601,17 @@ packages:
       command-exists: 1.2.9
       hexo-fs: 3.1.0
       hexo-log: 2.0.0
-      hexo-util: 2.6.0
+      hexo-util: 2.6.1
       minimist: 1.2.6
       resolve: 1.22.0
       tildify: 2.0.0
     dev: true
 
-  /hexo-front-matter/2.0.0:
-    resolution: {integrity: sha512-IR3tjAyK2Ga/0a/WDAoNy5+n3ju2/mkuAsCDEeGgGLf5+7kkiOkkG/FrnueuYgz0h2MPfWDLBiDsSTCmB0sLCA==}
-    engines: {node: '>=10.13.0'}
+  /hexo-front-matter/3.0.0:
+    resolution: {integrity: sha512-hSQTPUmB/BCe1BFYmXRkPyLk8rqbBqHCQq+rjwwOJuEfOADrFaVK2VPZb90tJzPyXE1xSxpgCxE/AZq0CyTVwg==}
+    engines: {node: '>=12.13.0'}
     dependencies:
-      js-yaml: 3.14.1
+      js-yaml: 4.1.0
     dev: true
 
   /hexo-fs/3.1.0:
@@ -619,7 +621,7 @@ packages:
       bluebird: 3.7.2
       chokidar: 3.5.3
       graceful-fs: 4.2.10
-      hexo-util: 2.6.0
+      hexo-util: 2.6.1
     dev: true
 
   /hexo-generator-archive/1.0.0:
@@ -743,26 +745,42 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
-  /hexo/5.4.2:
-    resolution: {integrity: sha512-Af6mxKwx9byalaffKgiQ8/bZfbXPo2SGEn2Q9hFh++15g15/IulvOhu8lQkJdyZNzmj3hOuSrJdqoUvIr3K/qw==}
-    engines: {node: '>=10.13.0'}
+  /hexo-util/2.6.1:
+    resolution: {integrity: sha512-xj1jUrId2qTe8L/tRizWWRl+j7X1Zzh5rCVtffboOU0p/EfbPomxIxDvntTHT3fcqgvLHsncqJF9V5j7+buOqA==}
+    engines: {node: '>=12.4.0'}
+    dependencies:
+      bluebird: 3.7.2
+      camel-case: 4.1.2
+      cross-spawn: 7.0.3
+      deepmerge: 4.2.2
+      highlight.js: 11.5.1
+      htmlparser2: 7.2.0
+      prismjs: 1.28.0
+      strip-indent: 3.0.0
+    dev: true
+
+  /hexo/6.2.0:
+    resolution: {integrity: sha512-HOpt3vUOz/T0rWTDb/CtWuBJwYARPwbpvGwsaz0RPu/l5I6AmKE+UA0lJZf14iPS3JIt/HiOcTZ3Qz22A+PE8w==}
+    engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
       abbrev: 1.1.1
       archy: 1.0.0
       bluebird: 3.7.2
-      chalk: 4.1.2
       hexo-cli: 4.3.0
-      hexo-front-matter: 2.0.0
+      hexo-front-matter: 3.0.0
       hexo-fs: 3.1.0
       hexo-i18n: 1.0.0
-      hexo-log: 2.0.0
-      hexo-util: 2.6.0
-      js-yaml: 3.14.1
+      hexo-log: 3.0.0
+      hexo-util: 2.6.1
+      js-yaml: 4.1.0
+      js-yaml-js-types: 1.0.0
       micromatch: 4.0.5
+      moize: 6.1.1
       moment: 2.29.3
       moment-timezone: 0.5.34
       nunjucks: 3.2.3
+      picocolors: 1.0.0
       pretty-hrtime: 1.0.3
       resolve: 1.22.0
       strip-ansi: 6.0.1
@@ -865,7 +883,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -898,7 +916,7 @@ packages:
     dev: true
 
   /isexe/2.0.0:
-    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
   /jake/10.8.5:
@@ -912,12 +930,17 @@ packages:
       minimatch: 3.1.2
     dev: true
 
-  /js-yaml/3.14.1:
-    resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
+  /js-yaml-js-types/1.0.0:
+    resolution: {integrity: sha512-UNjPwuoaj4mcHkJCJSF6l4MgkzoFjG+JJkBXMYNvjgO3yE9gTeRt+E6PN022vduz/daZZ7HmlEiSEE36NrGE4w==}
+    dependencies:
+      esprima: 4.0.1
+    dev: true
+
+  /js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
     dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
+      argparse: 2.0.1
     dev: true
 
   /jsdom/16.7.0:
@@ -963,7 +986,7 @@ packages:
     dev: true
 
   /jsonparse/1.3.1:
-    resolution: {integrity: sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=}
+    resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
     dev: true
 
@@ -989,6 +1012,10 @@ packages:
     resolution: {integrity: sha512-/Q+7MGzaETqifOMWYEA7HVMaZb4XbcRfaOzcSsHZEith83KGlvaSG33u0SKu89Mj5h+T8V2hM+8O45Qc5XTgwA==}
     engines: {node: '>= 10'}
     hasBin: true
+    dev: true
+
+  /micro-memoize/4.0.10:
+    resolution: {integrity: sha512-rk0OlvEQkShjbr2EvGn1+GdCsgLDgABQyM9ZV6VoHNU7hiNM+eSOkjGWhiNabU/XWiEalWbjNQrNO+zcqd+pEA==}
     dev: true
 
   /micromatch/4.0.5:
@@ -1043,6 +1070,13 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+    dev: true
+
+  /moize/6.1.1:
+    resolution: {integrity: sha512-6bryLehIBVByDdAkXhoaPP1fknkoq1hNPmVCDYIb/w5zwfidT02zLSto1uGbmnv1GKu02ysgAEaJ5Ic7QQaGQA==}
+    dependencies:
+      fast-equals: 3.0.3
+      micro-memoize: 4.0.10
     dev: true
 
   /moment-timezone/0.5.34:
@@ -1346,10 +1380,6 @@ packages:
   /source-map/0.7.3:
     resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
     engines: {node: '>= 8'}
-    dev: true
-
-  /sprintf-js/1.0.3:
-    resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
 
   /sprintf-js/1.1.2:
