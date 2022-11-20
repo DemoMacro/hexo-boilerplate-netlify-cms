@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   hexo: 6.2.0
   hexo-generator-archive: 1.0.0
-  hexo-generator-category: 1.0.0
+  hexo-generator-category: 2.0.0
   hexo-generator-index: 2.0.0
   hexo-generator-tag: 1.0.0
   hexo-renderer-ejs: 2.0.0
@@ -15,7 +15,7 @@ specifiers:
 devDependencies:
   hexo: 6.2.0
   hexo-generator-archive: 1.0.0
-  hexo-generator-category: 1.0.0
+  hexo-generator-category: 2.0.0
   hexo-generator-index: 2.0.0
   hexo-generator-tag: 1.0.0
   hexo-renderer-ejs: 2.0.0
@@ -631,11 +631,11 @@ packages:
       hexo-pagination: 1.0.0
     dev: true
 
-  /hexo-generator-category/1.0.0:
-    resolution: {integrity: sha512-kmtwT1SHYL2ismbGnYQXNtqLFSeTdtHNbJIqno3LKROpCK8ybST5QVXF1bZI9LkFcXV/H8ilt8gfg4/dNNcQQQ==}
-    engines: {node: '>=8.6.0'}
+  /hexo-generator-category/2.0.0:
+    resolution: {integrity: sha512-9OduRBf3WeRDa4BR0kAfRjOVHur7v3fm0NKAwbjUiqULigAdNZVZPO3cHKW2MlBbl/lI5PuWdhQ9zZ99CCCAgQ==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
+      hexo-pagination: 3.0.0
     dev: true
 
   /hexo-generator-index/2.0.0:
@@ -677,6 +677,11 @@ packages:
   /hexo-pagination/1.0.0:
     resolution: {integrity: sha512-miEVFgxchPr2qNWxw0JWpJ9R/Yaf7HjHBZVjvCCcqfbsLyYtCvIfJDxcEwz1sDOC/fLzYPqNnhUI73uNxBHRSA==}
     engines: {node: '>=8.6.0'}
+    dev: true
+
+  /hexo-pagination/3.0.0:
+    resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
+    engines: {node: '>=14'}
     dev: true
 
   /hexo-renderer-ejs/2.0.0:
@@ -934,6 +939,13 @@ packages:
     resolution: {integrity: sha512-UNjPwuoaj4mcHkJCJSF6l4MgkzoFjG+JJkBXMYNvjgO3yE9gTeRt+E6PN022vduz/daZZ7HmlEiSEE36NrGE4w==}
     dependencies:
       esprima: 4.0.1
+    dev: true
+
+  /js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
     dev: true
 
   /jsdom/19.0.0:
