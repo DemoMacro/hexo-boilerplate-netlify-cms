@@ -4,7 +4,7 @@ specifiers:
   hexo: 6.3.0
   hexo-generator-archive: 1.0.0
   hexo-generator-category: 2.0.0
-  hexo-generator-index: 2.0.0
+  hexo-generator-index: 3.0.0
   hexo-generator-tag: 1.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-marked: 5.0.0
@@ -16,7 +16,7 @@ devDependencies:
   hexo: 6.3.0
   hexo-generator-archive: 1.0.0
   hexo-generator-category: 2.0.0
-  hexo-generator-index: 2.0.0
+  hexo-generator-index: 3.0.0
   hexo-generator-tag: 1.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-marked: 5.0.0
@@ -630,12 +630,11 @@ packages:
       hexo-pagination: 3.0.0
     dev: true
 
-  /hexo-generator-index/2.0.0:
-    resolution: {integrity: sha512-q/29Vj9BZs0dwBcF+s9IT8ymS4aYZsDwBEYDnh96C8tsX+KPY5v6TzCdttz58BchifaJpP/l9mi6u9rZuYqA0g==}
-    engines: {node: '>=10.13.0'}
+  /hexo-generator-index/3.0.0:
+    resolution: {integrity: sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
-      timsort: 0.3.0
+      hexo-pagination: 3.0.0
     dev: true
 
   /hexo-generator-tag/1.0.0:
@@ -1461,10 +1460,6 @@ packages:
   /tildify/2.0.0:
     resolution: {integrity: sha512-Cc+OraorugtXNfs50hU9KS369rFXCfgGLpfCfvlc+Ud5u6VWmUQsOAa9HbTvheQdYnrdJqqv1e5oIqXppMYnSw==}
     engines: {node: '>=8'}
-    dev: true
-
-  /timsort/0.3.0:
-    resolution: {integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=}
     dev: true
 
   /titlecase/1.1.3:
